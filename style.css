@@ -1,0 +1,38 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #6D6D6D;
+    color: #fff;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section img {
+    border-radius: 15px;
+    width: 100px;
+}
+.musica{
+    color: #D30DAF;
+}
+
+.saude{
+    color: #68C874;
+}
+
+.esportes{
+    color: #FF6363;
+}
+
+.jogos{
+    color: #0026CE;
+}
+
+.filmes{
+    color: #C77100;
+}
