@@ -1,9 +1,9 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 header {
     display: flex;
     height: 80px;
@@ -27,11 +27,16 @@ header nav a:first-child:hover {
 header nav a:nth-child(2):hover {
     color: #F38D08;
 }
+
 header nav a:nth-child(3):hover {
     color: #60FF73;
-}header nav a:nth-child(4):hover {
+}
+
+header nav a:nth-child(4):hover {
     color: #FF6363;
-}header nav a:nth-child(5):hover {
+}
+
+header nav a:nth-child(5):hover {
     color: #FF2291;
 }
 
@@ -54,7 +59,8 @@ header .logo img {
     max-height: 28px;
 }
 
-header, footer {
+header,
+footer {
     background-color: #6D6D6D;
     color: #fff;
 }
@@ -65,30 +71,101 @@ header nav a {
     text-decoration: none;
 }
 
-section img {
+main section:first-child img {
     border-radius: 15px;
-    width: 100px;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
 }
-.musica{
+
+main section:nth-child(2) img {
+    border-radius: 15px;
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.musica {
     color: #D30DAF;
 }
 
-.saude{
+.saude {
     color: #68C874;
 }
 
-.esportes{
+.esportes {
     color: #FF6363;
 }
 
-.jogos{
+.jogos {
     color: #0026CE;
 }
 
-.filmes{
+.filmes {
     color: #C77100;
 }
 
 main {
     padding: 34px 98px;
+}
+
+main {
+    display: flex;
+}
+
+main section:first-child {
+    max-width: 58%;
+    border-right: 1px #4f4f4f17 solid;
+}
+
+main section:first-child #noticia-principal {
+    padding-bottom: 50px;
+    padding-right: 50px;
+    letter-spacing: 1.1px;
+    border-bottom: 1px #4f4f4f17 solid;
+    margin-bottom: 50px;
+}
+
+main section:first-child div article {
+    font-size: 15px ;
+}
+
+main section:first-child div {
+    gap: 12%;
+    padding-bottom: 25px;
+    padding-right: 50px;
+}
+
+
+main section:nth-child(2){
+    width: 100%;
+    padding-left: 60px;
+    max-width: 40%;
+    font-size: 20px;
+    height: 100%;
+}
+
+main section:nth-child(2) div {
+    gap: 30px;
+    padding-bottom: 12%;
+    height: 100%;
+}
+
+main section:first-child div {
+    display: flex;
+    margin-right: 150px
+}
+
+main section:first-child #noticia-principal h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    letter-spacing: 1.5px;
+}
+
+main section:nth-child(2) div {
+    display: flex;
+}
+
+main section article h3 {
+    margin-top: 10px ;
 }
