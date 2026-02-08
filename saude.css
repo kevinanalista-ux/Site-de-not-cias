@@ -1,0 +1,7 @@
+header, footer {
+    background: #64A2C9;
+}
+
+header nav a:nth-child(3) {
+    color: #60FF73;
+}
