@@ -5,13 +5,15 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
 header {
     display: flex;
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding-left: 98px;
-    padding-right: 98px;
 }
 
 header nav {
@@ -71,6 +73,7 @@ header,
 footer {
     background-color: #6D6D6D;
     color: #fff;
+    padding: 2rem 7vw;
 }
 
 footer {
@@ -78,7 +81,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 98px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1.5px;
@@ -92,17 +94,25 @@ header nav a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
 main section:first-child img {
     border-radius: 15px;
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
 }
 
 main section:nth-child(2) img {
     border-radius: 15px;
-    width: 180px;
-    height: 130px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
 }
 
@@ -127,8 +137,9 @@ main section:nth-child(2) img {
 }
 
 main {
-    padding: 34px 98px;
+    padding: 2rem 7vw;
     display: flex;
+    gap: 4vw;
 }
 
 main section:first-child {
@@ -143,37 +154,27 @@ main section:first-child #noticia-principal {
     border-bottom: 1px #4f4f4f17 solid;
     margin-bottom: 50px;
     color: #3C3C3C;
+    word-wrap: break-word;
 }
 
 main section:first-child div article {
-    font-size: 15px ;
+    font-size: 15px;
     width: 100%;
 }
 
 main section:first-child div {
-    gap: 12%;
-    padding-bottom: 25px;
-    padding-right: 50px;
+    margin-right: 50px;
 }
 
-
-main section:nth-child(2){
+main section:nth-child(2) {
     width: 100%;
-    padding-left: 60px;
     max-width: 40%;
     font-size: 20px;
     height: 100%;
 }
 
 main section:nth-child(2) div {
-    gap: 80px;
-    padding-bottom: 12%;
     height: 100%;
-}
-
-main section:first-child div {
-    display: flex;
-    margin-right: 150px
 }
 
 main section:first-child #noticia-principal h2 {
@@ -182,12 +183,8 @@ main section:first-child #noticia-principal h2 {
     letter-spacing: 0px;
 }
 
-main section:nth-child(2) div {
-    display: flex;
-}
-
 main section article h3 {
-    margin-top: 10px ;
+    margin-top: 10px;
 }
 
 main section article {
@@ -196,10 +193,72 @@ main section article {
 }
 
 main section div article {
-    max-width: 150px;
-
+    flex: 1 1 30%;
+    max-width: 100%;
 }
-main section article:hover{
+
+main section article:hover {
     transform: scale(1.02);
     cursor: pointer;
+}
+
+main section {
+    margin: 1rem 0px;
+}
+
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 1rem 4vw;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    header a .logo {
+        font-size: 12px;
+    }
+
+    header nav a,
+    footer {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 0.5rem 7vw;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    main section:first-child {
+        border-bottom: 1px #4f4f4f17 solid !important;
+    }
+
+    main section:first-child div {
+        margin-right: 0;
+    }
+
+    main section:first-child #noticia-principal {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    main section {
+        max-width: 100% !important;
+        border: none !important;
+        padding: 20px 0px !important;
+    }
+
+    main section .container-grid article {
+        font-size: 20px !important;
+    }
+
+    .container-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    }
+
 }
