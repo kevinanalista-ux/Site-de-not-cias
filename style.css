@@ -94,9 +94,15 @@ header nav a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.container-grid {
+.container-grid:first-child {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.container-grid:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
     gap: clamp(1rem, 3vw, 2rem);
 }
 
